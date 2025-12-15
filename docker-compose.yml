@@ -6,4 +6,4 @@ services:
       ACCEPT_EULA: "Y"
     platform: linux/amd64
     ports:
-      - "1435:1433"
+      - "1439:1433"

@@ -11,7 +11,7 @@ public class ProductSpecParams
        set => _pageSize = (value > MaxPageSize) ? MaxPageSize : value;
     }
     
-    private List<string> _brands;
+    private List<string> _brands = [];
     public List<string> Brands
     {
         get => _brands;
@@ -22,7 +22,7 @@ public class ProductSpecParams
         }
     }
     
-     private List<string> _types;
+    private List<string> _types = [];
     public List<string> Types
     {
         get => _types;
@@ -34,4 +34,12 @@ public class ProductSpecParams
     }
 
     public string? Sort { get; set; }
+
+    private string? _search;
+    public string Search
+    {
+        get => _search ?? "";
+        set => _search = value.ToLower();
+    }
+    
 }
